@@ -6,6 +6,7 @@ import "./assets/styles/index.css";
 import { Container } from "react-bootstrap";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Foorter";
+import HomeScreen from "./screens/HomeScreen";
 
 const App = () => {
   return (
@@ -14,7 +15,7 @@ const App = () => {
       <main className="py-3">
 
         <Container>
-          <h1>Welcome to ProShop</h1>
+          <HomeScreen />
         </Container>
       </main>
       <Footer />
