@@ -1,12 +1,12 @@
-import { createRoot } from "react-dom/client";
+
 
 import "./assets/styles/bootstrap.custom.css";
 import "./assets/styles/index.css";
 
 import { Container } from "react-bootstrap";
+import { Outlet } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Foorter";
-import HomeScreen from "./screens/HomeScreen";
 
 const App = () => {
   return (
@@ -15,14 +15,12 @@ const App = () => {
       <main className="py-3">
 
         <Container>
-          <HomeScreen />
+          <Outlet />
         </Container>
       </main>
       <Footer />
     </>
   );
 };
+export default App;
 
-const container = document.getElementById("root");
-const root = createRoot(container);
-root.render(<App />);
